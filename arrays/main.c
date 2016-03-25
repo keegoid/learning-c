@@ -14,29 +14,13 @@
 #include <time.h>
 #include <ctype.h>
 
-#define NUMROWS 3
+#define NUMROWS 3 
 #define NUMCOLS 3
-#define BLACK 0
-#define DARKBLUE 1
-#define DARKGREEN 2
-#define DARKCYAN 3
-#define DARKRED 4
-#define DARKMAGENTA 5
-#define DARKYELLOW 6
-#define DARKWHITE 7
-#define GREY 8
-#define BLUE 9
-#define GREEN 10
-#define CYAN 11
-#define RED 12
-#define MAGENTA 13
-#define YELLOW 14
-#define WHITE 15
 
 /* function prototypes */
 void readData(char drawVals[NUMROWS][NUMCOLS], char blankVals[NUMROWS][NUMCOLS]);
 void drawFigure(int x, int y, char drawVals[NUMROWS][NUMCOLS]);
-void pause(int pauseTime);
+void mypause(int pauseTime);
 void eraseFigure(int x, int y, char blankVals[][NUMCOLS]);
 void animate(char drawVals[NUMROWS][NUMCOLS], char blankVals[NUMROWS][NUMCOLS]);
 
@@ -106,7 +90,7 @@ void eraseFigure(int x, int y, char blankVals[][NUMCOLS])
 		fflush (stdout);
 	}
 
-void pause(int pauseTime)
+void mypause(int pauseTime)
 	{
 		pauseTime = clock() + pauseTime;
  		while(clock() < pauseTime) 		/* wait pauseTime msec */
