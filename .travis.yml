@@ -14,4 +14,4 @@ env:
   - TEST_DIR=structs-and-binary-files RUN=no
   - TEST_DIR=time RUN=no
   - TEST_DIR=while
-script: cd $TEST_DIR && gcc main.c $ARGS && { [ -z $RUN ] && ./a.out || echo "compiled without running a.out"; }
+script: cd $TEST_DIR && gcc main.c $ARGS && { [ -z $RUN ] && ./a.out || echo "skipped ./a.out"; }
