@@ -4,10 +4,14 @@
  * Description: 	practice with colors
  */
 
-#include <stdio.h>
-#include <conio.h>    /* for MS-DOS */
+// for Linux
+#include "../conio.h"
 
-int main(void) 
+// for MS-DOS
+//#include <stdio.h>
+//#include <conio.h>
+
+int main(void)
 {
 	int i;
 

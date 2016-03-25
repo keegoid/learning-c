@@ -4,9 +4,13 @@
  * Description: 	Creates a building or moving animation on the output screen
  */
 
-#include <stdio.h>
+// for Linux
+#include "../conio.h"
+
+// for MS-DOS
+//#include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+//#include <conio.h>
 #include <time.h>
 #include <ctype.h>
 

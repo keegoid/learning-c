@@ -1,0 +1,5 @@
+language: c
+compiler: gcc
+env:
+  - TEST_DIR=colors
+script: cd $TEST_DIR && gcc main.c -o main.out
