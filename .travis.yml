@@ -5,7 +5,7 @@ env:
   - TEST_DIR=colors
   - TEST_DIR=control-statements
   - TEST_DIR=expressions
-  - TEST_DIR=file-input-with-math
+  - TEST_DIR=file-input-with-math ARGS=-lm
   - TEST_DIR=for
   - TEST_DIR=for-loops-with-arrays
   - TEST_DIR=functions
@@ -14,4 +14,4 @@ env:
   - TEST_DIR=structs-and-binary-files
   - TEST_DIR=time
   - TEST_DIR=while
-script: cd $TEST_DIR && gcc main.c
+script: cd $TEST_DIR && gcc main.c $ARGS
