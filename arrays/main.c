@@ -140,7 +140,7 @@ void animate(char drawVals[][NUMCOLS], char blankVals[][NUMCOLS])
 										drawFigure(k,n+63,drawVals);
 									}
 							}
-								pause(5);
+								mypause(5);
 						for (k = j-3; k <= j-3; k++)		/* erases each figure after 5 msec */
 							{								      /* erases to j-3 each time leaving one set of arrows */
 								if (m < 24)
