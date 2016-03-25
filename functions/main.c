@@ -5,8 +5,13 @@
  *					   Program then uses these functions to draw a picture.
  */
 
-#include <stdio.h>
-#include <conio.h>
+// for Linux
+#include "../conio.h"
+
+// for MS-DOS
+//#include <stdio.h>
+//#include <conio.h>
+
 #define BLACK 0
 #define DARKBLUE 1
 #define DARKGREEN 2

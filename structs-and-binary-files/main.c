@@ -4,11 +4,15 @@
   Description: 	Takes a binary file, reads its data based on user input and returns it in a struct
  */
 
-#include <stdio.h>
+// for Linux
+#include "../conio.h"
+
+// for MS-DOS
+//#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 //#include <conio.h>
-#include <curses.h>
+//#include <curses.h>
 
 #define ARRAYSIZE 20
 
