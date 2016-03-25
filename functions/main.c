@@ -12,23 +12,6 @@
 //#include <stdio.h>
 //#include <conio.h>
 
-#define BLACK 0
-#define DARKBLUE 1
-#define DARKGREEN 2
-#define DARKCYAN 3
-#define DARKRED 4
-#define DARKMAGENTA 5
-#define DARKYELLOW 6
-#define DARKWHITE 7
-#define GREY 8
-#define BLUE 9
-#define GREEN 10
-#define CYAN 11
-#define RED 12
-#define MAGENTA 13
-#define YELLOW 14
-#define WHITE 15
-
 void horzLine(int x, int y, int length, char sym, int color);    			   /* horzLine() prototype */
 void vertLine(int x, int y, int length, char sym, int color);    			   /* vertLine() prototype */
 void boxFilled(int x, int y, int width, int height, char sym, int color);	/* boxFilled() prototype */ 
