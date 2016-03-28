@@ -119,7 +119,7 @@ int user_input (struct city_t *modify,int count)
 	printf ("\nFile contains %d records\n",count);
 	printf ("\nWhich record do you want to edit (1 - %d): ",count);
 //	scanf ("%d",&cities);
-	cities=1
+	cities=1;
 	printf ("\n%s",aa);
 //	getchar ();				/* getchar() must be used here to capture the extra '\n' */
 //	gets (modify->name);
