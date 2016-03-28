@@ -39,11 +39,11 @@ void  getNames (char recipient[], char sender[])	/* Gets the name of the recipie
 	printf ("This program will create a randomly generated letter.\n\n");
 	printf ("%s",aa);
 //	gets (recipient);
-	recipient="Keegan"
+	recipient="Keegan";
 	putchar ('\n');
 	printf ("%s",bb);
 //	gets (sender);
-	sender="Adriana"
+	sender="Adriana";
 	putchar ('\n');
 	putchar ('\n');
 	puts (cc);

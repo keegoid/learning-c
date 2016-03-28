@@ -123,18 +123,18 @@ int user_input (struct city_t *modify,int count)
 	printf ("\n%s",aa);
 //	getchar ();				/* getchar() must be used here to capture the extra '\n' */
 //	gets (modify->name);
-	modify->name="PDX2"
+	modify->name="PDX2";
 	printf ("%s",bb);
 //	scanf ("%c%c",&modify->state[0],&modify->state[1]);	/* the structure pointer operator must be used to acces structure members in function */
-	modify->state[0] = 'O'
-	modify->state[1] = 'R'
+	modify->state[0] = 'O';
+	modify->state[1] = 'R';
 	modify->state[2] = ' ';	/* stores a space character in the last array member for state */
 	printf ("%s",cc);
 //	scanf ("%lf",&modify->revenue);
-	modify->revenue = 100000
+	modify->revenue = 100000;
 	printf ("%s",dd);
 //	scanf ("%d",&modify->population);
-	modify->population = 10000
+	modify->population = 10000;
 	putchar ('\n');
 
 	return cities;			/* return cities will return the record number to be modified so it can be passed to another function */
