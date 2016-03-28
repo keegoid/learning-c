@@ -12,9 +12,9 @@ env:
   - TEST_DIR=for-loops-with-arrays
   - TEST_DIR=functions
   - TEST_DIR=printf
-  - TEST_DIR=string-and-char-io
-  - TEST_DIR=structs-and-binary-files
-  - TEST_DIR=time
+  - TEST_DIR=string-and-char-io RUN=no
+  - TEST_DIR=structs-and-binary-files RUN=no
+  - TEST_DIR=time RUN=no
   - TEST_DIR=while
 
 branches:
