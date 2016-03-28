@@ -1,5 +1,8 @@
+script: script/cibuild
 language: c
-compiler: gcc
+compiler: clang
+sudo: false
+
 env:
   - TEST_DIR=arrays
   - TEST_DIR=colors
@@ -14,4 +17,10 @@ env:
   - TEST_DIR=structs-and-binary-files RUN=no
   - TEST_DIR=time RUN=no
   - TEST_DIR=while
-script: cd $TEST_DIR && gcc main.c $ARGS && { [ -z $RUN ] && ./a.out || echo "skipped ./a.out"; }
+
+branches:
+  only:
+    - master
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
