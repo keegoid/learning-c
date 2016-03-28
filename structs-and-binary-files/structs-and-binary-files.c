@@ -123,7 +123,7 @@ int user_input (struct city_t *modify,int count)
 	printf ("\n%s",aa);
 //	getchar ();				/* getchar() must be used here to capture the extra '\n' */
 //	gets (modify->name);
-	modify->name="PDX2";
+//	modify->name=PDX2;
 	printf ("%s",bb);
 //	scanf ("%c%c",&modify->state[0],&modify->state[1]);	/* the structure pointer operator must be used to acces structure members in function */
 	modify->state[0] = 'O';
