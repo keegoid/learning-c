@@ -10,7 +10,7 @@ then
   exit 1
 else
     cd $TEST_DIR
-#    clang -coverage -O0 main.c -o main $ARGS && { [ -z $RUN ] && ./main || echo "skipped ./main"; }
+#    clang -coverage -O0 $TEST_DIR.c -o $TEST_DIR $ARGS && { [ -z $RUN ] && ./$TEST_DIR || echo "skipped ./$TEST_DIR"; }
     gcc -coverage $TEST_DIR.c -o $TEST_DIR $ARGS && { [ -z $RUN ] && ./$TEST_DIR || echo "skipped ./$TEST_DIR"; }
     gcov $TEST_DIR.c
     cd -
