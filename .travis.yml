@@ -3,7 +3,7 @@ compiler: gcc
 sudo: false
 
 env:
-  - TEST_DIR=arrays
+  - TEST_DIR=array-animation
   - TEST_DIR=colors
   - TEST_DIR=control-statements
   - TEST_DIR=expressions
