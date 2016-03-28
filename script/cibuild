@@ -4,13 +4,13 @@ script/branding
 
 set -e
 
-
 if [[ -z "$TEST_DIR" ]]
 then
-  echo "Unknown test suite."
+  echo "Unknown test directory"
   exit 1
 else
     cd $TEST_DIR
     clang -coverage -O0 main.c -o main $ARGS && { [ -z $RUN ] && ./main || echo "skipped ./main"; }
     gcov main.c
+    cd -
 fi
