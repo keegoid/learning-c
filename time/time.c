@@ -16,7 +16,7 @@ int main(void) {
 		;
 	reactTime = clock();	/* start measuring time */
 	printf("*");
-//	getchar();	/* wait for ENTER to be pressed */
+	getchar();	/* wait for ENTER to be pressed */
 	reactTime = clock() - reactTime; /* calculate the reaction time */
 	printf("Your reaction time was %d msec", reactTime);
 	

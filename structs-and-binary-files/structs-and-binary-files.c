@@ -112,22 +112,19 @@ int user_input (struct city_t *modify,int count)
 
 	printf ("\nFile contains %d records\n",count);
 	printf ("\nWhich record do you want to edit (1 - %d): ",count);
-//	scanf ("%d",&cities);
+	scanf ("%d",&cities);
 	cities=1;
 	printf ("\n%s",aa);
-//	getchar ();				/* getchar() must be used here to capture the extra '\n' */
-//	gets (modify->name);
-//	modify->name=PDX2;
+	getchar ();				/* getchar() must be used here to capture the extra '\n' */
+	gets (modify->name);
 	printf ("%s",bb);
-//	scanf ("%c%c",&modify->state[0],&modify->state[1]);	/* the structure pointer operator must be used to acces structure members in function */
-	modify->state[0] = 'O';
-	modify->state[1] = 'R';
+	scanf ("%c%c",&modify->state[0],&modify->state[1]);	/* the structure pointer operator must be used to acces structure members in function */
 	modify->state[2] = ' ';	/* stores a space character in the last array member for state */
 	printf ("%s",cc);
-//	scanf ("%lf",&modify->revenue);
+	scanf ("%lf",&modify->revenue);
 	modify->revenue = 100000;
 	printf ("%s",dd);
-//	scanf ("%d",&modify->population);
+	scanf ("%d",&modify->population);
 	modify->population = 10000;
 	putchar ('\n');
 
