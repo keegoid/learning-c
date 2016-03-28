@@ -12,6 +12,6 @@ else
     cd $TEST_DIR
 #    clang -coverage -O0 main.c -o main $ARGS && { [ -z $RUN ] && ./main || echo "skipped ./main"; }
     gcc -coverage main.c -o main $ARGS && { [ -z $RUN ] && ./main || echo "skipped ./main"; }
-    gcov main.c && bash <(curl -s https://codecov.io/bash)
+    gcov main.c && curl -s https://codecov.io/bash
     cd -
 fi
