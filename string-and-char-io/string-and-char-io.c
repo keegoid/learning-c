@@ -12,17 +12,22 @@
 #define WIDTH 81
 
 /* function prototypes */
-void  getNames (char recipient[], char sender[]);
-void  getWords (int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH]);
-void  writeLetter(char sender[], char recipient[], int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH]);
+void getNames(char recipient[], char sender[]);
+void getWords(int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH]);
+void writeLetter(char sender[], char recipient[], int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH]);
 
-int main(void) 
+int main(int argc, char *argv[]) 
 {
 	/* initializing arrays and pointer variables */
 	char recipient[20],sender[20],nouns[10][WIDTH],verbs[10][WIDTH],adjectives[10][WIDTH];
 	int wordCount[3];
-		
-	getNames (recipient,sender);					      /* function calls using arrays */
+
+	if (argc > 1) {
+		sender[0]='k';
+		recipient[0]='a';
+	}
+	else
+		getNames (recipient,sender);					      /* function calls using arrays */
 	getWords (wordCount,nouns,verbs,adjectives);
 	writeLetter (sender,recipient,wordCount,nouns,verbs,adjectives);
 	
@@ -30,7 +35,7 @@ int main(void)
 }
 
 /* function definitions */
-void  getNames (char recipient[], char sender[])	/* Gets the name of the recipient and sender. */
+void getNames(char recipient[], char sender[])	/* Gets the name of the recipient and sender. */
 {
 	char *aa = "Enter the recipient's name and press enter. ";
 	char *bb = "Enter the sender's name and press enter. ";
@@ -47,7 +52,7 @@ void  getNames (char recipient[], char sender[])	/* Gets the name of the recipie
 	puts (cc);
 }
 
-void  getWords (int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH])
+void getWords(int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH])
 /* Opens the words.txt file, reads the counts and words for each category and closes the file. */
 {
 	char n[20],v[20],a[20];
@@ -95,7 +100,7 @@ void  getWords (int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char 
 	fclose (wordFile);
 }
 
-void  writeLetter(char sender[], char recipient[], int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH])
+void writeLetter(char sender[], char recipient[], int wordCount[], char nouns[][WIDTH], char verbs[][WIDTH], char adjectives[][WIDTH])
 /* Opens template.txt for reading and letter.txt for writing. Copies each character from pgm7Template.txt to letter.txt, 
  * replacing special codes as follows:
  *     <r>  is replaced by the name of the recipient

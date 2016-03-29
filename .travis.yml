@@ -1,5 +1,5 @@
 language: c
-compiler: gcc
+compiler: clang
 sudo: false
 
 env:
@@ -12,9 +12,9 @@ env:
   - TEST_DIR=for-loops-with-arrays
   - TEST_DIR=functions
   - TEST_DIR=printf
-  - TEST_DIR=string-and-char-io RUN=no
-  - TEST_DIR=structs-and-binary-files RUN=no
-  - TEST_DIR=time RUN=no
+  - TEST_DIR=string-and-char-io BYPASS_USER_INPUT=true
+  - TEST_DIR=structs-and-binary-files BYPASS_USER_INPUT=true
+  - TEST_DIR=time BYPASS_USER_INPUT=true
   - TEST_DIR=while
 
 branches:

@@ -8,7 +8,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-int main(void) {
+int main(int argc, char *argv[]) {
 	int ranTime, reactTime;
 	
 	ranTime = clock() + 1000 + rand() % 10000;
@@ -16,7 +16,8 @@ int main(void) {
 		;
 	reactTime = clock();	/* start measuring time */
 	printf("*");
-	getchar();	/* wait for ENTER to be pressed */
+	if(argc < 2)
+		getchar();	/* wait for ENTER to be pressed */
 	reactTime = clock() - reactTime; /* calculate the reaction time */
 	printf("Your reaction time was %d msec", reactTime);
 	
