@@ -1,0 +1,17 @@
+engines:
+  fixme:
+    enabled: true
+ratings:
+  paths: []
+exclude_paths:
+- script/
+- conio.h
+
+- CHANGELOG.{md,markdown,txt,textile}
+- CONTRIBUTING.{md,markdown,txt,textile}
+- readme.{md,markdown,txt,textile}
+- README.{md,markdown,txt,textile}
+- Readme.{md,markdown,txt,textile}
+- ReadMe.{md,markdown,txt,textile}
+- COPYING
+- LICENSE

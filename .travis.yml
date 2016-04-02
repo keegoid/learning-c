@@ -1,7 +1,6 @@
 language: c
 compiler: clang
 sudo: false
-
 env:
   - TEST_DIR=array-animation
   - TEST_DIR=colors
@@ -16,13 +15,14 @@ env:
   - TEST_DIR=structs-and-binary-files BYPASS_USER_INPUT=true
   - TEST_DIR=time BYPASS_USER_INPUT=true
   - TEST_DIR=while
-
 branches:
   only:
     - master
-
 before_script:
 - chmod +x script/*
 script: script/cibuild
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+addons:
+  code_climate:
+    repo_token: 24e7826de3f8aee9771e5bf980d7f6d4b9650820dd1318d852913c8b4e624ded
